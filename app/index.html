@@ -16,36 +16,35 @@
    <header class="header">
       <div class="header__top">
          <div class="container">
-            <div class="header__inner">
+            <div class="header__top-inner">
                <div class="header__logo">
                   <img src="images/logo.png" alt="logo">
                   <span>Mart</span>Place
                </div>
-               <button class="header__btn">Become a Seller</button>
+               <button class="header__btn rounded">Become a Seller</button>
                <div class="header__info">
-                  <img src="images/icons/notify.svg" alt="notify">
-
+                  <span class="lnr lnr-alarm"> </span>
                </div>
                <div class="header__info">
-                  <img src="images/icons/email.svg" alt="email">
+                  <span class="lnr lnr-envelope"> </span>
                </div>
                <div class="header__info">
-                  <img src="images/icons/basket.svg" alt="basket">
+                  <span class="lnr lnr-cart"> </span>
                </div>
-               <a class="header__author" href="">
-                  <div class="header__author-avatar" style="background-image: url();"></div>
-                  <div class="header__author-info">
+               <div class="header__author" href="">
+                  <img src="" alt="">
+                  <div class="header__author-name">
                      Taofiq Hakim
-                     <span> $20.45</span>
+                     <span class="header__author-balance"> $20.45 </span>
                   </div>
-               </a>
+               </div>
             </div>
          </div>
       </div>
 
       <div class="header__lower">
          <div class="container">
-            <div class="header__inner">
+            <div class="header__lower-inner">
                <nav class="header__menu">
                   <ul class="menu__list">
                      <li>
@@ -76,10 +75,12 @@
                   </ul>
                </nav>
                <div class="header__search">
-                  <input type="text" placeholder="Search product here..." required>
-                  <button type="submit">
-                     <img src="images/icons/search.svg" alt="search">
-                  </button>
+                  <form>
+                     <input class="rounded" type="text" placeholder="Search product here..." required>
+                     <button class="rounded" type="submit">
+                        <span class="lnr lnr-magnifier"> </span>
+                     </button>
+                  </form>
                </div>
             </div>
          </div>
