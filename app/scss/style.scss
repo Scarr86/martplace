@@ -41,14 +41,10 @@
       vertical-align: middle;
     }
   }
-  &__info {
+  &__icon {
     cursor: pointer;
-    span {
-      display: block;
-      width: 42px;
-      height: 32px;
-      font-size: 20px;
-    }
+    font-family: "Linearicons-Free";
+    font-size: 20px;
     & + & {
       margin-left: 15px;
     }
@@ -134,12 +130,31 @@
   }
 }
 
-//====== header ============
+.notifi-icon {
+  &::before {
+    content: "\e858";
+  }
+}
+.letter-icon {
+  &::before {
+    content: "\e818";
+  }
+}
+.cart-icon {
+  &::before {
+    content: "\e82e";
+  }
+}
 
 //===== Search =============
 
 .search {
-  background-image: linear-gradient(to left, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
+  background-image: linear-gradient(
+    to left,
+    rgb(0, 48, 222) 0%,
+    rgb(23, 69, 237) 54%,
+    rgb(46, 90, 251) 100%
+  );
 }
 
 .search__inner {
@@ -174,6 +189,7 @@
       border: 1px solid #fff;
       background-color: transparent;
       padding: 20px 30px;
+      cursor: pointer;
 
       & + button {
         margin-left: 30px;
@@ -203,7 +219,6 @@
     position: relative;
     z-index: 2;
 
-
     .form-group {
       display: flex;
       flex-grow: 1;
@@ -221,24 +236,22 @@
         }
       }
       select {
-
         border: none;
         border-left: 1px solid #dcdcdc;
         padding: 0 70px 0 15px;
         color: $text;
       }
     }
-    button{
-       background-color: $primary;
-       border: none;
-       border-radius: 4px;
-       color: #fff;
-       margin-left: 30px;
-       padding: 20px 65px;
-       cursor: pointer;
+    button {
+      background-color: $primary;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      margin-left: 30px;
+      padding: 20px 65px;
+      cursor: pointer;
     }
   }
-
   &::before,
   &::after {
     content: "";
@@ -263,9 +276,41 @@
 
 //===== search =============
 
-.advantages__inner{
-   min-height: 710px;
-   padding: 120px 0;
-
-
+.advantages{
+  &__inner {
+    min-height: 710px;
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 365px;
+    min-height: 400px;
+    padding: 40px 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all .3s;
+    text-align: center;
+    &:hover{
+      box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+      transform: scale(1.05);
+    }
+    &-img{
+      width: 150px;
+      height: 150px;  
+      margin: 0 auto;
+      background-image: url();
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; 
+    }
+    &-title{
+      font-size: 24px;
+      padding: 30px 0;
+    }
+  }
 }
+
+
+
+
