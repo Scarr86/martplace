@@ -5,7 +5,11 @@ $(function(){
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: true,
+      // dots: true,
+      // arrows:false,
+      // appendArrows: $('.products__title-control'),
+      prevArrow: $('.button-left'),
+      nextArrow: $('.button-right'),
     });
  });
 
