@@ -4,8 +4,9 @@
 <head>
    <meta charset='utf-8'>
    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-   <title>Page Title</title>
+   <title>MartPlase</title>
    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel="icon" type="image/x-icon" href="images/logo.png">
    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap" rel="stylesheet">
    <link rel='stylesheet' type='text/css' media='screen' href='css/libs.min.css'>
    <link rel='stylesheet' type='text/css' media='screen' href='css/style.min.css'>
@@ -164,157 +165,170 @@
       <div class="container">
          <div class="products__inner">
 
-            <div class="products__title">
-               <div class="products__title-text">
+            <div class="products__title title">
+               <div class="title__text">
                   Weekly Featured Products
                </div>
-               <div class="products__title-control">
-                  <button class="button-left"> - </button>
-                  <button class="button-right"> + </button>
+               <div class="title__box title__box_bg-accent">
+                  <button class="title__btn-left"></button>
+                  <button class="title__btn-right"></button>
                </div>
             </div>
 
-            <div class="products__slider">
+            <div class="products__slider slider-products ">
 
+               <div class="slider-products__wrap">
+                  <div class="products__item card card_h">
+                     <div class=" card__img"></div>
+                     <div class="products__content card__content ">
+                        <div class="card__title card__title_big">One Page Resume Template </div>
+                        <div class="card__wrap">
+                           <img class="card__avatar" src="images/avatar.jpg" alt="avatar">
+                           <div class="card__author"> AazzTech </div>
 
-               <div class="products__slider-item">
-                  <div class="products-item">
-                     <div class="products-item__img ">
+                           <div class="card__category">
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                 viewBox="0 0 32 32">
+                                 <title>wordpress</title>
+                                 <path fill="#21759b"
+                                    d="M28.625 9.1c1.12 2.049 1.757 4.4 1.757 6.9 0 5.305-2.875 9.941-7.151 12.433l4.393-12.703c0.82-2.053 1.093-3.695 1.093-5.152 0-0.54-0.035-1.040-0.093-1.48zM17.984 9.239c0.863-0.040 1.643-0.14 1.643-0.14 0.776-0.1 0.685-1.24-0.089-1.199 0 0-2.34 0.18-3.84 0.18-1.419 0-3.8-0.2-3.8-0.2-0.78-0.040-0.881 1.14-0.1 1.18 0 0 0.72 0.081 1.5 0.12l2.24 6.14-3.16 9.44-5.239-15.56c0.865-0.040 1.645-0.133 1.645-0.133 0.78-0.1 0.688-1.24-0.087-1.195 0 0-2.328 0.184-3.832 0.184-0.267 0-0.584-0.011-0.92-0.020 2.603-3.836 7.035-6.416 12.055-6.416 3.745 0 7.153 1.429 9.715 3.777-0.061-0.004-0.121-0.012-0.188-0.012-1.413 0-2.416 1.231-2.416 2.552 0 1.187 0.684 2.191 1.413 3.375 0.548 0.96 1.187 2.191 1.187 3.969 0 1.22-0.472 2.659-1.095 4.639l-1.433 4.78-5.2-15.48 0.001 0.019zM16 30.379c-1.412 0-2.775-0.204-4.064-0.583l4.316-12.541 4.42 12.116c0.032 0.071 0.067 0.135 0.104 0.199-1.493 0.524-3.1 0.812-4.776 0.812zM1.615 16c0-2.085 0.448-4.067 1.247-5.853l6.859 18.799c-4.795-2.332-8.104-7.251-8.105-12.945zM16 0c-8.82 0-16 7.18-16 16s7.18 16 16 16 16-7.18 16-16-7.18-16-16-16z">
+                                 </path>
+                              </svg>
 
-                     </div>
-                     <div class="products-item__content ">
-                        <div class="products-item__title">One Page Resume Template </div>
-                        <div class="products-item__author">
-                           <img class="products-item__avatar" src="" alt="avatar">
-                           AazzTech
+                              WordPress
+                           </div>
                         </div>
-                        <div class="products-item__category">
-                           WordPress
-                        </div>
 
-                        <div class="products-item__text">
+                        <div class="card__text">
                            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
                            leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut
                            scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
                         </div>
-                        <ul class="products-item__filter">
-                           <li><a href="#">website</a></li>
-                           <li><a href="#">plugin</a></li>
-                           <li><a href="#">landing page</a></li>
+                        <ul class="card__list">
+                           <li><a class="chip" href="#">website</a></li>
+                           <li><a class="chip" href="#">plugin</a></li>
+                           <li><a class="chip" href="#">landing page</a></li>
                         </ul>
-                        <div class="products-item__footer">
-                           <div class="products-item__price">
+                        <div class="card__footer">
+                           <div class="card__price card__price_primary">
                               $10 - $50
                            </div>
-                           <div class="products-item__like">
-                              46
+                           <div class="card__like">
+                              <span>46</span>
                            </div>
-                           <div class="products-item__sale">
-                              634
+                           <div class="card__sale ">
+                              <span> 634</span>
                            </div>
-                           <div class="products-item__rate">
+                           <div class="card__rate card__footer_last">
                               <div class="rate-star"></div>
                            </div>
                         </div>
                      </div>
                   </div>
-
                </div>
 
-               <div class="products__slider-item">
-                  <div class="products-item">
-                     <div class="products-item__img ">
+               <div class="slider-products__wrap">
+                  <div class="products__item card card_h">
+                     <div class="card__img"></div>
+                     <div class="products__content card__content ">
+                        <div class="card__title card__title_big">One Page Resume Template </div>
+                        <div class="card__wrap">
+                           <img class="card__avatar" src="images/avatar.jpg" alt="avatar">
+                           <div class="card__author"> AazzTech </div>
 
-                     </div>
-                     <div class="products-item__content ">
-                        <div class="products-item__title">One Page Resume Template </div>
-                        <div class="products-item__author">
-                           <img class="products-item__avatar" src="" alt="avatar">
-                           AazzTech
-                        </div>
-                        <div class="products-item__category">
-                           WordPress
+                           <div class="card__category">
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                 viewBox="0 0 32 32">
+                                 <title>wordpress</title>
+                                 <path fill="#21759b"
+                                    d="M28.625 9.1c1.12 2.049 1.757 4.4 1.757 6.9 0 5.305-2.875 9.941-7.151 12.433l4.393-12.703c0.82-2.053 1.093-3.695 1.093-5.152 0-0.54-0.035-1.040-0.093-1.48zM17.984 9.239c0.863-0.040 1.643-0.14 1.643-0.14 0.776-0.1 0.685-1.24-0.089-1.199 0 0-2.34 0.18-3.84 0.18-1.419 0-3.8-0.2-3.8-0.2-0.78-0.040-0.881 1.14-0.1 1.18 0 0 0.72 0.081 1.5 0.12l2.24 6.14-3.16 9.44-5.239-15.56c0.865-0.040 1.645-0.133 1.645-0.133 0.78-0.1 0.688-1.24-0.087-1.195 0 0-2.328 0.184-3.832 0.184-0.267 0-0.584-0.011-0.92-0.020 2.603-3.836 7.035-6.416 12.055-6.416 3.745 0 7.153 1.429 9.715 3.777-0.061-0.004-0.121-0.012-0.188-0.012-1.413 0-2.416 1.231-2.416 2.552 0 1.187 0.684 2.191 1.413 3.375 0.548 0.96 1.187 2.191 1.187 3.969 0 1.22-0.472 2.659-1.095 4.639l-1.433 4.78-5.2-15.48 0.001 0.019zM16 30.379c-1.412 0-2.775-0.204-4.064-0.583l4.316-12.541 4.42 12.116c0.032 0.071 0.067 0.135 0.104 0.199-1.493 0.524-3.1 0.812-4.776 0.812zM1.615 16c0-2.085 0.448-4.067 1.247-5.853l6.859 18.799c-4.795-2.332-8.104-7.251-8.105-12.945zM16 0c-8.82 0-16 7.18-16 16s7.18 16 16 16 16-7.18 16-16-7.18-16-16-16z">
+                                 </path>
+                              </svg>
+
+                              WordPress
+                           </div>
                         </div>
 
-                        <div class="products-item__text">
+                        <div class="card__text">
                            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
                            leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut
                            scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
                         </div>
-                        <ul class="products-item__filter">
-                           <li><a href="#">website</a></li>
-                           <li><a href="#">plugin</a></li>
-                           <li><a href="#">landing page</a></li>
+                        <ul class="card__list">
+                           <li><a class="chip" href="#">website</a></li>
+                           <li><a class="chip" href="#">plugin</a></li>
+                           <li><a class="chip" href="#">landing page</a></li>
                         </ul>
-                        <div class="products-item__footer">
-                           <div class="products-item__price">
+                        <div class="card__footer">
+                           <div class="card__price card__price_primary">
                               $10 - $50
                            </div>
-                           <div class="products-item__like">
-                              46
+                           <div class="card__like">
+                              <span>46</span>
                            </div>
-                           <div class="products-item__sale">
-                              634
+                           <div class="card__sale ">
+                              <span> 634</span>
                            </div>
-                           <div class="products-item__rate">
+                           <div class="card__rate card__footer_last">
                               <div class="rate-star"></div>
                            </div>
                         </div>
                      </div>
                   </div>
-
                </div>
 
+               <div class="slider-products__wrap">
+                  <div class="products__item card card_h">
+                     <div class="card__img"></div>
+                     <div class="products__content card__content ">
+                        <div class="card__title card__title_big">One Page Resume Template </div>
+                        <div class="card__wrap">
+                           <img class="card__avatar" src="images/avatar.jpg" alt="avatar">
+                           <div class="card__author"> AazzTech </div>
 
-               <div class="products__slider-item">
-                  <div class="products-item">
-                     <div class="products-item__img ">
+                           <div class="card__category">
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                 viewBox="0 0 32 32">
+                                 <title>wordpress</title>
+                                 <path fill="#21759b"
+                                    d="M28.625 9.1c1.12 2.049 1.757 4.4 1.757 6.9 0 5.305-2.875 9.941-7.151 12.433l4.393-12.703c0.82-2.053 1.093-3.695 1.093-5.152 0-0.54-0.035-1.040-0.093-1.48zM17.984 9.239c0.863-0.040 1.643-0.14 1.643-0.14 0.776-0.1 0.685-1.24-0.089-1.199 0 0-2.34 0.18-3.84 0.18-1.419 0-3.8-0.2-3.8-0.2-0.78-0.040-0.881 1.14-0.1 1.18 0 0 0.72 0.081 1.5 0.12l2.24 6.14-3.16 9.44-5.239-15.56c0.865-0.040 1.645-0.133 1.645-0.133 0.78-0.1 0.688-1.24-0.087-1.195 0 0-2.328 0.184-3.832 0.184-0.267 0-0.584-0.011-0.92-0.020 2.603-3.836 7.035-6.416 12.055-6.416 3.745 0 7.153 1.429 9.715 3.777-0.061-0.004-0.121-0.012-0.188-0.012-1.413 0-2.416 1.231-2.416 2.552 0 1.187 0.684 2.191 1.413 3.375 0.548 0.96 1.187 2.191 1.187 3.969 0 1.22-0.472 2.659-1.095 4.639l-1.433 4.78-5.2-15.48 0.001 0.019zM16 30.379c-1.412 0-2.775-0.204-4.064-0.583l4.316-12.541 4.42 12.116c0.032 0.071 0.067 0.135 0.104 0.199-1.493 0.524-3.1 0.812-4.776 0.812zM1.615 16c0-2.085 0.448-4.067 1.247-5.853l6.859 18.799c-4.795-2.332-8.104-7.251-8.105-12.945zM16 0c-8.82 0-16 7.18-16 16s7.18 16 16 16 16-7.18 16-16-7.18-16-16-16z">
+                                 </path>
+                              </svg>
 
-                     </div>
-                     <div class="products-item__content ">
-                        <div class="products-item__title">One Page Resume Template </div>
-                        <div class="products-item__author">
-                           <img class="products-item__avatar" src="" alt="avatar">
-                           AazzTech
+                              WordPress
+                           </div>
                         </div>
-                        <div class="products-item__category">
-                           WordPress
-                        </div>
 
-                        <div class="products-item__text">
+                        <div class="card__text">
                            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
                            leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut
                            scelerisque the mattis, leo quam aliquet congue justo ut scelerisque.
                         </div>
-                        <ul class="products-item__filter">
-                           <li><a href="#">website</a></li>
-                           <li><a href="#">plugin</a></li>
-                           <li><a href="#">landing page</a></li>
+                        <ul class="card__list">
+                           <li><a class="chip" href="#">website</a></li>
+                           <li><a class="chip" href="#">plugin</a></li>
+                           <li><a class="chip" href="#">landing page</a></li>
                         </ul>
-                        <div class="products-item__footer">
-                           <div class="products-item__price">
+                        <div class="card__footer">
+                           <div class="card__price card__price_primary">
                               $10 - $50
                            </div>
-                           <div class="products-item__like">
-                              46
+                           <div class="card__like">
+                              <span>46</span>
                            </div>
-                           <div class="products-item__sale">
-                              634
+                           <div class="card__sale ">
+                              <span> 634</span>
                            </div>
-                           <div class="products-item__rate">
+                           <div class="card__rate card__footer_last">
                               <div class="rate-star"></div>
                            </div>
                         </div>
                      </div>
                   </div>
-
                </div>
-
-
 
             </div>
          </div>
-
       </div>
    </section>
 
