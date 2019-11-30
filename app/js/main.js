@@ -1,6 +1,14 @@
 
 
 $(function () {
+
+   try {
+      var mixer = mixitup('.newest-products__box');
+   } catch (error) {
+      console.log(error);
+   }
+
+   
    $('.slider-products').slick({
       infinite: true,
       slidesToShow: 1,

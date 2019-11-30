@@ -265,7 +265,6 @@
   }
 }
 
-
 //===== Advantages===========
 
 .advantages {
@@ -318,6 +317,9 @@
 
   &__item {
     width: 100%;
+    box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+
+
   }
 
   &__content {
@@ -341,15 +343,25 @@
     font-size: 30px;
     color: #000;
   }
-  &__box {
-    height: 45px;
-    width: 110px;
-    border-radius: 45px;
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch;
-    overflow: hidden;
 
+ 
+  &__box-filter {
+    img {
+      cursor: pointer;
+      display: inline-block;
+      padding-left: 25px;
+      vertical-align: middle;
+      height: 25px;
+    }
+  }
+  &__control {
+   height: 45px;
+   width: 110px;
+   border-radius: 45px;
+   display: flex;
+   align-items: stretch;
+
+   overflow: hidden;
     &_bg-accent {
       background-color: $accent;
     }
@@ -375,13 +387,14 @@
   }
 }
 
+
+ 
+
 .card {
   border-radius: 4px;
   overflow: hidden;
   display: flex;
-  &_h {
-    flex-direction: row;
-  }
+
   &_v {
     flex-direction: column;
     .card__img {
@@ -394,11 +407,17 @@
     background-color: #4e5760;
   }
 
+  &.card_v &__content {
+    max-width: 100%;
+  }
+
   &__content {
+     flex-grow: 1;
+   //   height: 100%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
   }
 
   &__title {
@@ -428,13 +447,16 @@
   &__category {
     vertical-align: sub;
     margin-left: 19px;
-    //  padding-left: 27px;
     color: $accent;
+    img{
+      margin-right: 5px;  
+      display: inline-block;
+    }
     svg {
       width: 15px;
       height: 15px;
       display: inline-block;
-      margin-right: 10px;
+      margin-right: 5px;
       path {
         fill: $accent;
       }
@@ -465,7 +487,7 @@
 
     &_last {
       order: 1;
-      margin-left: auto;
+      margin-left: auto !important;
     }
   }
 
@@ -474,8 +496,10 @@
     padding: 0 18px;
     margin-right: 20px;
     border-radius: 19px;
-    color: #fff;
+    color: $primary;
+    background-color: #e6f1fd;
     &_primary {
+      color: #fff;
       background-color: $primary;
     }
   }
@@ -489,6 +513,9 @@
       font-size: 15px;
       color: #000;
     }
+  }
+  &__rate{
+     margin-left: 15px;
   }
 
   &__sale {
@@ -507,7 +534,40 @@
   padding: 0 15px;
   background-color: #f1f3f6;
   border-radius: 30px;
-  & + & {
-    margin-left: 7px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary;
+    color: #fff;
   }
 }
+
+//======== Newest Products ============
+
+.newest-products{
+   &__box{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: stretch;
+   }
+   &__item{
+      // max-height: 530px;
+      max-width: 360px;
+      margin-bottom: 30px;
+      width: 100%;
+      box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+   }
+   &__item-content{
+      padding: 30px 30px 0px;
+
+
+   }
+   .card__footer{
+      padding: 15px 30px;
+   }
+   
+}
+
+ 
