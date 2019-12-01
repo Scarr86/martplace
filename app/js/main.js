@@ -3,7 +3,7 @@
 $(function () {
 
    try {
-      var mixer = mixitup('.newest-products__box');
+      var mixer = mixitup('.newest__box');
    } catch (error) {
       console.log(error);
    }
@@ -16,13 +16,19 @@ $(function () {
       // dots: true,
       // arrows:false,
       // appendArrows: $('.products__title-control'),
-      prevArrow: $('.title__btn-left'),
-      nextArrow: $('.title__btn-right'),
+      prevArrow: $('.products__btn-left'),
+      nextArrow: $('.products__btn-right'),
    });
 
-   $(".rate-star").rateYo({
+   $(".products .rate-star").rateYo({
       rating: 3.6,
       starWidth: "15px",
+      readOnly: true,
+      ratedFill: "#ffc000"
+   });
+   $(".newest .rate-star").rateYo({
+      rating: 3.6,
+      starWidth: "12px",
       readOnly: true,
       ratedFill: "#ffc000"
    });
