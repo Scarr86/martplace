@@ -835,21 +835,21 @@
   &__col {
     font-size: 15px;
     color: #ababab;
-    & a{
+    & a {
       font-size: 15px;
       color: #ababab;
+      display: block;
     }
     padding: 0 10px;
     width: 100%;
-    &-info{
+    &-info {
       max-width: 275px;
     }
-    &-menu{
+    &-menu {
       max-width: 175px;
     }
-    &-subscribe{
+    &-subscribe {
       max-width: 380px;
-
     }
   }
 
@@ -861,26 +861,23 @@
     padding-left: 30px;
     position: relative;
     width: 100%;
-    // margin-top: 10px;
-    // line-height: 26px;
-    &::before{
+    &::before {
       content: "\e833";
       position: absolute;
       font-family: "Linearicons-Free";
       font-size: 16px;
       left: 0;
     }
-    &-phone{
-      &::before{
+    &-phone {
+      &::before {
         content: "\e830";
       }
     }
-    &-mail{
-      &::before{
+    &-mail {
+      &::before {
         content: "\e818";
       }
     }
-
   }
 
   &__title {
@@ -888,38 +885,56 @@
     color: #fff;
     margin-bottom: 35px;
 
-    &-logo{
+    &-logo {
       color: $primary;
       font-weight: 700;
       font-size: 24px;
       position: relative;
       padding-left: 42px;
-      &::before{
+      &::before {
         content: "";
         width: 40px;
         height: 40px;
-        background-image: url('../images/logo-footer.png');
+        background-image: url("../images/logo-footer.png");
         position: absolute;
         top: -5px;
         left: 0;
       }
-      span{
+      span {
         color: #fff;
       }
-      img{
+      img {
         vertical-align: middle;
       }
-
     }
   }
 
   &__list {
+    line-height: 24px;
+    li {
+      margin-bottom: 10px;
+    }
   }
 
   &__form {
   }
 
   &__social {
+    li{
+      display: inline-block;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      &::before {
+        font-family: "icomoon";
+        color: #fff;
+      }
+    }
   }
 
   &__copy {
@@ -935,8 +950,17 @@
   }
 }
 .link-facebook {
+  background-color: #395799;
+  &::before {
+    content: "\f09a";
+  }
 }
 .link-twitter {
+  background-color: #19b2f5;
+  &::before {
+    content: "\f099";
+  }
+
 }
 .link-google {
 }
