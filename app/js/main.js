@@ -16,8 +16,19 @@ $(function () {
       // dots: true,
       // arrows:false,
       // appendArrows: $('.products__title-control'),
-      prevArrow: $('.products__btn-left'),
-      nextArrow: $('.products__btn-right'),
+      prevArrow: $('.products .title__btn-left'),
+      nextArrow: $('.products .title__btn-right'),
+   });
+   // slider-followers
+   $('.slider-followers').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      // dots: true,
+      // arrows:false,
+      // appendArrows: $('.products__title-control'),
+      prevArrow: $('.followers .title__btn-left'),
+      nextArrow: $('.followers .title__btn-right'),
    });
 
    $(".products .rate-star").rateYo({
