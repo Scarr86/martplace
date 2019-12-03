@@ -1030,10 +1030,15 @@
   }
 }
 
+
+
 .item-last-news {
   display: flex;
   flex-direction: column;
   background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+
 
   &__img {
     height: 230px;
