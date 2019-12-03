@@ -932,6 +932,94 @@
 }
 
 // end starting
+//start reviews
+.reviews {
+  background-color: #fff;
+  min-height: 840px;
+  padding: 120px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+
+  &__item {
+    max-width: 555px;
+    min-height: 320px;
+    width: 100%;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+
+  }
+  
+  &__btn {
+    width: 190px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    border-radius: 55px;
+    color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    &:active{
+      box-shadow: none;
+    }
+
+  }
+}
+
+.item-reviews {
+  border-left: 2px solid $primary;
+  padding: 50px 40px;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__userpic {
+    height: 80px;
+    width: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__icon {
+    margin-left: auto;
+    &::before{
+      content: '\e83f';
+      font-family: 'Linearicons-Free';
+      font-size: 60px;
+      color: #e8e8e8;
+    }
+  }
+}
+.author-reviews {
+
+  &__name {
+    color: #000;
+    font-size: 20px;
+  }
+
+  &__desc {
+  }
+}
+
+
+//end reviews
+
 
 //========= Footer =======
 .footer {
