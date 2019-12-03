@@ -667,6 +667,9 @@
     background-color: $primary;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    &:active{
+      box-shadow: none;
+    }
   }
 }
 
@@ -866,6 +869,69 @@
   }
 }
 // end advantage
+
+// start starting
+.starting {
+  display: flex;
+  // flex-direction: column;
+  
+  &__item{
+    flex: 1 1 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 0 15px;
+    &:nth-child(1){
+      background-color: $primary;
+      background-image: url('../images/sell-bg.png');
+    }
+    &:nth-child(2){
+      background-color: $accent;
+      background-image: url('../images/shopping-bg.png');
+    }
+  }
+}
+.item-starting{
+  text-align: center;
+  min-height: 565px;
+  &__img{
+    margin-bottom: 45px;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    max-width: 585px;
+    margin-bottom: 45px;
+  }
+  &__btn{
+    height: 55px;
+    min-width: 190px;
+    border-radius: 55px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+
+  }
+}
+
+.become-author-btn{
+  color: $primary;
+}
+.start-shopping-btn{
+  color: $accent;
+}
+
+// end starting
 
 //========= Footer =======
 .footer {
