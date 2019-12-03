@@ -148,11 +148,6 @@
 //==== Face =====
 
 .face {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 730px;
   background-image: linear-gradient(
     to left,
     rgb(0, 48, 222) 0%,
@@ -161,7 +156,14 @@
   );
 
   &__inner {
+    display: flex;
+    min-height: 730px;
     max-width: 945px;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
     text-align: center;
     padding-bottom: 50px;
   }
@@ -468,15 +470,15 @@
       content: "";
       top: 0;
       left: 0;
-      right: 0;
-      bottom: 0;
       position: absolute;
+      width: 100%;
+      height: 100%;
       background-image: linear-gradient(
         to right,
         rgb(0, 48, 222) 0%,
         rgb(23, 69, 237) 54%,
         rgb(46, 90, 251) 100%
-      ) !important;
+      );
       opacity: 0;
       transition: all 0.3s;
     }
@@ -689,138 +691,77 @@
 //========== Followers ===================
 .followers {
   background-color: $grey-bg;
-
   .title {
     margin-bottom: 50px;
     &__control {
       background-color: $primary;
     }
   }
-
-  // .followers__inner
-
   &__inner {
     padding: 120px 0;
   }
-
-  // .followers__slider
-
   &__slider {
+  }
+}
+
+// end Followers
+// start statistic
+.statistic {
+  background-color: #212225;
+
+  &__inner {
+    min-height: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 36px;
+    span {
+      color: #fff;
+      font-size: 18px;
+      margin-top: 15px;
+    }
+    &::before {
+      font-family: "Linearicons-Free";
+      margin-bottom: 50px;
+      font-size: 48px;
+    }
+    &:nth-child(1) {
+      color: #feb71d;
+      &::before {
+        content: "\e84c";
+      }
+    }
+    &:nth-child(2) {
+      color: #58c9e9;
+      &::before {
+        content: "\e80b";
+      }
+    }
+    &:nth-child(3) {
+      color: #58c9e9;
+      &::before {
+        content: "\e854";
+      }
+    }
+    &:nth-child(4) {
+      color: #ff6a6d;
+      &::before {
+        content: "\e82b";
+      }
+    }
   }
 }
 .container {
 }
-.title {
-  // .title__text
 
-  &__text {
-  }
-
-  // .title__control
-
-  &__control {
-  }
-
-  // .title__btn-left
-
-  &__btn-left {
-  }
-
-  // .title__btn-right
-
-  &__btn-right {
-  }
-}
-.slider-followers {
-  // .slider-followers__wrap
-
-  &__wrap {
-  }
-}
-.card {
-  // .card__img
-
-  &__img {
-  }
-
-  // .card__control
-
-  &__control {
-  }
-
-  // .card__content
-
-  &__content {
-  }
-
-  // .card__inner
-
-  &__inner {
-  }
-
-  // .card__title
-
-  &__title {
-  }
-
-  // .card__wrap
-
-  &__wrap {
-  }
-
-  // .card__avatar
-
-  &__avatar {
-  }
-
-  // .card__author
-
-  &__author {
-  }
-
-  // .card__category
-
-  &__category {
-  }
-
-  // .card__text
-
-  &__text {
-  }
-
-  // .card__footer
-
-  &__footer {
-    // .card__footer_last
-
-    &_last {
-    }
-  }
-
-  // .card__price
-
-  &__price {
-  }
-
-  // .card__like
-
-  &__like {
-  }
-
-  // .card__sale
-
-  &__sale {
-  }
-
-  // .card__rate
-
-  &__rate {
-  }
-}
-.rounded {
-}
-.rate-star {
-}
+// end statistic
 
 //========= Footer =======
 .footer {
@@ -840,7 +781,6 @@
       color: #ababab;
       display: block;
     }
-    padding: 0 10px;
     width: 100%;
     &-info {
       max-width: 275px;
@@ -917,11 +857,41 @@
   }
 
   &__form {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    height: 50px;
+    width: 375px;
+    input {
+      border: none;
+      height: 100%;
+      width: 100%;
+      padding: 0 120px 0 30px;
+      &::placeholder {
+        color: #ababab;
+      }
+    }
+    button {
+      height: 100%;
+      width: 115px;
+      border-radius: 50px;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0px;
+      cursor: pointer;
+      background-color: $primary;
+      color: #fff;
+    }
   }
 
   &__social {
-    li{
+    margin-top: 40px;
+    li {
       display: inline-block;
+      & + li {
+        margin-left: 15px;
+      }
     }
     a {
       display: flex;
@@ -960,13 +930,30 @@
   &::before {
     content: "\f099";
   }
-
 }
 .link-google {
+  background-color: #f05b44;
+  &::before {
+    content: "\f1a0";
+  }
 }
 .link-pinterest {
+  background-color: #9c0c1c;
+  &::before {
+    content: "\f0d2";
+  }
 }
 .link-linkedln {
+  background-color: #0da6be;
+  &::before {
+    content: "\f0e1";
+  }
 }
 .link-dribbble {
+  background-color: #ea4c89;
+  &::before {
+    content: "\f17d";
+  }
 }
+
+//====== End Footer ================
