@@ -14,26 +14,33 @@
 
 <body>
     <div class="wrapper">
+
         <div class="content page-content">
+            <!-------------------- 
+                START HEADR
+            --------------------->
             <header class="header">
+
                 <div class="header__top">
                     <div class="container">
                         <div class="header__top-inner">
                             <div class="header__logo">
                                 <img src="images/logo.png" alt="logo">
-                                <span>Mart</span>Place
+                                <div class="header__logo-text">
+                                    <span>Mart</span>Place
+                                </div>
                             </div>
                             <button class="header__btn rounded">Become a Seller</button>
-                            <div class="header__icon notifi-icon"></div>
-                            <div class="header__icon letter-icon"></div>
-                            <div class="header__icon cart-icon"></div>
-                            <div class="header__author" href="">
-                                <img src="" alt="">
+                            <a class="header__icon notifi-icon active"><span>25</span> </a>
+                            <a class="header__icon letter-icon active"><span>8</span> </a>
+                            <a class="header__icon cart-icon active"><span>6</span> </a>
+                            <a class="header__author" href="">
+                                <img src="images/user.jpg" alt="">
                                 <div class="header__author-name">
                                     Taofiq Hakim
                                     <span class="header__author-balance"> $20.45 </span>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -42,6 +49,11 @@
                     <div class="container">
                         <div class="header__lower-inner">
                             <nav class="header__menu">
+                                <div class="burger">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
                                 <ul class="menu__list">
                                     <li>
                                         <a href="#">
@@ -70,12 +82,10 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <div class="header__search-form">
+                            <div class="header__search-form search-form ">
                                 <form>
                                     <input class="rounded" type="text" placeholder="Search product here..." required>
-                                    <button class="rounded" type="submit">
-                                        <span class="lnr lnr-magnifier"> </span>
-                                    </button>
+                                    <button class="rounded" type="submit"> </button>
                                 </form>
                             </div>
                         </div>
@@ -83,33 +93,46 @@
                 </div>
 
             </header>
+            <!-------------------- 
+                END HEADR
+            --------------------->
+            <!--------------- 
+                START FACE
+            ------------------>
             <section class="face">
+                <div class="container">
+                    <div class="face__inner ">
+                        <div class="face__text">
+                            <span>4,572</span> wordpress themes, made with love
+                        </div>
+                        <div class="search-form">
+                            <form>
+                                <input class="rounded" type="text" placeholder="Search product here..." required>
+                                <button class="rounded" type="submit">
+                                    <span class="">Search </span>
+                                </button>
+                            </form>
+                        </div>
 
-                <div class="face__inner ">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li><a href="#">Home</a> </li>
+                                <li> <span href="#">Category Page Grid</span> </li>
+                            </ul>
+                        </div>
 
-                    <div class="face__titel">
-                        <span>4,572</span> wordpress themes, made with love
+
                     </div>
-                    <!-- .face__form -->
-
-                    <div class="face__text">
-                        MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products
-                    </div>
-                    <div class="face__btn">
-                        <button class="rounded">
-                            View All Products
-                        </button>
-                        <button class="rounded">
-                            Popular Products
-                        </button>
-                    </div>
-
                 </div>
-
             </section>
+            <!--------------- 
+                END FACE
+            ------------------>
+
         </div>
-
-
+        <!------------------- 
+        START FOOTER
+        --------------------->
         <footer class="footer">
             <div class="container">
                 <div class="footer__inner">
@@ -187,12 +210,15 @@
                 </div>
             </div>
             <div class="footer__copy">
-                ©2017 <span>MartPlace.</span> All rights reserved. Created by <span> AazzTech</span>
+                <div class="container">
+                    ©2017 <span>MartPlace.</span> All rights reserved. Created by <span> AazzTech</span>
+                </div>
             </div>
         </footer>
+        <!------------------- 
+            END FOOTER
+        --------------------->
     </div>
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>

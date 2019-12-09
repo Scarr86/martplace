@@ -11,10 +11,10 @@ $light-grey-bg: #f6f7fb;
 
 @mixin icon($code, $size){
    &::before{
+      content: $code;
       cursor: pointer;
       font-family: "Linearicons-Free";
       font-size: $size;
-      content: $code;
    }
 }
 

@@ -1,13 +1,6 @@
 
 
 $(function () {
-
-   try {
-      var mixer = mixitup('.newest__box');
-   } catch (error) {
-      console.log(error);
-   }
-
    
    $('.slider-products').slick({
       infinite: true,
@@ -43,5 +36,15 @@ $(function () {
       readOnly: true,
       ratedFill: "#ffc000"
    });
+
+   $(".burger").on('click', function(){
+      $('.header .menu__list').slideToggle();
+   });
+
+   try {
+      var mixer = mixitup('.newest__box');
+   } catch (error) {
+      console.log(error);
+   }
 });
 
