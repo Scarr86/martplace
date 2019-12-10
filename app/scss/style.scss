@@ -30,7 +30,6 @@
   &__logo-text {
     display: inline-block;
   }
-
   &__logo {
     font-size: 30px;
     font-weight: 700;
@@ -43,58 +42,17 @@
       vertical-align: middle;
     }
   }
-
-  &__icon {
-    &.active {
-      display: block;
-    }
-    display: none;
-    position: relative;
-    // margin: 15px;
-    z-index: 2;
-    cursor: pointer;
-    & + & {
-      margin-left: 35px;
-    }
-    span {
-      z-index: 1;
-      display: block;
-      position: absolute;
-      height: 22px;
-      min-width: 22px;
-      border-radius: 22px;
-
-      text-align: center;
-      color: #fff;
-      line-height: 22px;
-      padding: 0 4px;
-      top: -12px;
-      right: -13px;
-    }
+  &__notification,
+  &__message,
+  &__basket {
+    margin-left: 35px;
   }
-  .notifi-icon {
-    @include icon("\e858", 20px);
-    span {
-      background-color: #ff6a6c;
-    }
+  &__author-box {
+    margin-left: 40px;
   }
-  .letter-icon {
-    @include icon("\e818", 20px);
-    span {
-      background-color: #62d03b;
-    }
-  }
-  .cart-icon {
-    @include icon("\e82e", 20px);
-    span {
-      background-color: #0674ec;
-    }
-  }
-
   &__author {
     cursor: pointer;
-    margin-left: 25px;
-    font-weight: 500;
+
     img {
       height: 50px;
       width: 50px;
@@ -108,6 +66,7 @@
       margin-left: 15px;
       line-height: 22px;
       vertical-align: middle;
+      font-weight: 500;
       span {
         display: block;
         color: $primary;
@@ -116,6 +75,28 @@
       }
     }
   }
+
+  &__author-dropdown{
+    color: #54667a;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 3;
+    a{
+      color: #54667a;
+      font-size: 15px;
+      font-family: "Quicksand", sans-serif;
+
+      &::before{
+        font-family: "Linearicons-Free";
+      }
+      &:hover{
+        color: #fff;
+        background-color: #0674ec;
+      }
+    }
+  }
+
+
 
   &__lower-inner {
     height: 83px;
@@ -138,6 +119,64 @@
       }
     }
   }
+}
+
+.notification,
+.message,
+.basket {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+  &.login--on.active {
+    display: block;
+  }
+  &__link {
+    font-size: 20px;
+    span {
+      z-index: 1;
+      display: block;
+      position: absolute;
+      height: 22px;
+      min-width: 22px;
+      border-radius: 22px;
+      font-size: 14px;
+      text-align: center;
+      color: #fff;
+      line-height: 20px;
+      padding: 0 4px;
+      top: -12px;
+      right: -13px;
+    }
+  }
+}
+.basket {
+  &.active {
+    display: block;
+  }
+  &__link {
+    span {
+      background-color: #0674ec;
+    }
+  }
+}
+.notification {
+  &__link {
+    span {
+      background-color: #ff6a6c;
+    }
+  }
+}
+.message {
+  &__link {
+    span {
+      background-color: #62d03b;
+    }
+  }
+}
+
+.dropdown-top {
+  position: absolute;
 }
 
 // Burger
