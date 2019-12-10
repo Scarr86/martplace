@@ -49,6 +49,7 @@
   }
   &__author-box {
     margin-left: 40px;
+    position: relative;
   }
   &__author {
     cursor: pointer;
@@ -81,13 +82,23 @@
     background-color: #fff;
     padding: 20px;
     z-index: 3;
+    right: 0;
+    min-width: 270px;
     a{
+      display: block;
+      border-radius: 3px;
+      padding: 15px 0 15px 40px;
       color: #54667a;
       font-size: 15px;
       font-family: "Quicksand", sans-serif;
+      font-weight: 500;
+      position: relative;
+      line-height: 24px;
 
       &::before{
         font-family: "Linearicons-Free";
+        position: absolute;
+        left: 10px;
       }
       &:hover{
         color: #fff;
