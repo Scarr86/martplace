@@ -1,7 +1,7 @@
 
 
 $(function () {
-   
+
    $('.slider-products').slick({
       infinite: true,
       slidesToShow: 1,
@@ -37,9 +37,22 @@ $(function () {
       ratedFill: "#ffc000"
    });
 
-   $(".burger").on('click', function(){
+   $(".burger").on('click', function () {
       $('.header .menu__list').slideToggle();
    });
+
+   // dropdown menu header
+   $('.header__author-box, .header__notification, .header__message, .header__basket').on('mouseenter', function (ev) {
+      $(this).find('.dropdown-top-arrow').show();
+      $(this).find('.dropdown-top-content').slideDown('fast');
+   });
+   $('.header__author-box, .header__notification, .header__message, .header__basket').on('mouseleave', function (ev) {
+      $(this).find('.dropdown-top-arrow').hide();
+      $(this).find('.dropdown-top-content').slideUp(0);
+   })
+   //=============
+
+
 
    try {
       var mixer = mixitup('.newest__box');

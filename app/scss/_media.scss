@@ -97,8 +97,11 @@
   }
 }
 @media (max-width: 360px) {
-  .header__notification, .header__message, .header__basket {
-    margin-left: 25px;
+   .header__notification, .header__message, .header__basket {
+      padding: 0 25px 0 0px;
+  }
+  .header__notification {
+   padding-left: 25px;
 }
 }
 
