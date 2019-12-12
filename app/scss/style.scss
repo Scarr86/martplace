@@ -49,10 +49,10 @@
   &__notification,
   &__message,
   &__basket {
-    padding:0 28px 0 5px ;
+    padding: 0 28px 0 5px;
   }
-  &__notification{
-     padding-left: 25px;
+  &__notification {
+    padding-left: 25px;
   }
   &__author-box {
     display: flex;
@@ -186,6 +186,7 @@
   .dropdown-top {
     right: auto;
     left: 0;
+    min-width: 370px;
     &-arrow {
       right: auto;
       left: 28px;
@@ -196,6 +197,29 @@
       background-color: #ff6a6c;
     }
   }
+  .dropdown-top-content {
+    padding: 0px 25px;
+
+    background-color: #fff;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      color: $primary;
+      font-size: 15px;
+    }
+  }
+
+  &__item {
+    border-top: 1px solid #e8ebf0;
+    padding: 15px 0;
+  }
 }
 .message {
   &__link {
@@ -205,23 +229,84 @@
   }
 }
 
-.notification__dropdown {
-  .dropdown-top-content {
-    min-width: 270px;
-    background-color: #fff;
+.item-notification {
+  display: flex;
+  justify-content: space-between;
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
   }
+  &__content {
+    max-width: 235px;
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 15px;
+    line-height: 22px;
+    color: #333;
+    font-weight: 500;
+    span {
+      color: #747a86;
+      font-weight: 400;
+    }
+  }
+
+  &__theme {
+    font-size: 15px;
+    line-height: 22px;
+    color: $primary;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: #747a86;
+  }
+
+  &__icon {
+    align-self: center;
+    text-align: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    &::before {
+      line-height: 32px;
+    }
+    &.lnr-heart {
+      background-color: #e6f1fd;
+      &::before {
+        color: $primary;
+      }
+    }
+    &.lnr-bubble {
+      background-color: #f1ecf9;
+      &::before {
+        color: #7347c1;
+      }
+    }
+    &.lnr-cart {
+      background-color: #fff0f0;
+      &::before {
+        color: #ff6a6c ;
+      }
+    }
+    &.lnr-star {
+      background-color: #effaeb;
+      &::before {
+        color: #62d03a;
+      }
+    }
+  }
+}
+.lnr-heart {
+}
+
+.notification__dropdown {
 }
 .message__dropdown {
-  .dropdown-top-content {
-    min-width: 270px;
-    background-color: #fff;
-  }
 }
 .basket__dropdown {
-  .dropdown-top-content {
-    min-width: 270px;
-    background-color: #fff;
-  }
 }
 
 .dropdown-top {
