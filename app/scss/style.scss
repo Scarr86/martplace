@@ -46,14 +46,8 @@
       vertical-align: middle;
     }
   }
-  &__notification,
-  &__message,
-  &__basket {
-    padding: 0 28px 0 5px;
-  }
-  &__notification {
-    padding-left: 25px;
-  }
+
+ 
   &__author-box {
     display: flex;
     align-items: center;
@@ -87,7 +81,7 @@
   }
 
   &__author-dropdown {
-    .dropdown-top-content {
+    .dropdown-top__content {
       color: #54667a;
       background-color: #fff;
       padding: 20px;
@@ -146,6 +140,7 @@
   cursor: pointer;
   display: none;
   position: relative;
+  padding: 0 28px 0 5px;
   &.login--on.active {
     display: flex;
   }
@@ -178,16 +173,15 @@
       background-color: #0674ec;
     }
   }
-  //   .dropdown-top-content{
-  //      display: block;
-  //   }
 }
+
 .notification {
+   padding-left: 25px;
   .dropdown-top {
     right: auto;
     left: 0;
     min-width: 370px;
-    &-arrow {
+    &__arrow {
       right: auto;
       left: 28px;
     }
@@ -197,31 +191,13 @@
       background-color: #ff6a6c;
     }
   }
-  .dropdown-top-content {
-    padding: 0px 25px;
-
-    background-color: #fff;
-  }
-
-  &__title {
-    font-size: 18px;
-    line-height: 28px;
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    a {
-      color: $primary;
-      font-size: 15px;
-    }
-  }
-
-  &__item {
-    border-top: 1px solid #e8ebf0;
-    padding: 15px 0;
-  }
 }
+
 .message {
+  .dropdown-top {
+    min-width: 370px;
+  }
+
   &__link {
     span {
       background-color: #62d03b;
@@ -229,47 +205,35 @@
   }
 }
 
-.item-notification {
+.item-notification,
+.item-message {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e8ebf0;
+  padding: 15px 0;
   img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    margin-right: 15px;
   }
   &__content {
-    max-width: 235px;
     width: 100%;
   }
 
-  &__name {
+  &__text {
     font-size: 15px;
-    line-height: 22px;
-    color: #333;
-    font-weight: 500;
-    span {
-      color: #747a86;
-      font-weight: 400;
-    }
-  }
-
-  &__theme {
-    font-size: 15px;
-    line-height: 22px;
-    color: $primary;
-  }
-
-  &__date {
-    font-size: 14px;
-    color: #747a86;
+    color: #555;
+    margin-top: 10px;
   }
 
   &__icon {
-    align-self: center;
     text-align: center;
-    height: 32px;
-    width: 32px;
+    min-height: 32px;
+    min-width: 32px;
     border-radius: 50%;
+    margin-left: 15px;
     &::before {
       line-height: 32px;
     }
@@ -288,7 +252,7 @@
     &.lnr-cart {
       background-color: #fff0f0;
       &::before {
-        color: #ff6a6c ;
+        color: #ff6a6c;
       }
     }
     &.lnr-star {
@@ -299,8 +263,64 @@
     }
   }
 }
-.lnr-heart {
+.item-notification__date {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #747a86;
 }
+
+.item-notification__content {
+  line-height: 22px;
+  span {
+    display: inline-block;
+    font-size: 15px;
+  }
+  span:first-of-type {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+  span:last-of-type {
+    color: $primary;
+  }
+}
+
+.item-message__content {
+  line-height: 22px;
+  span{
+     color: #7d7d7d;
+  }
+  span.active {
+    color: $primary;
+  }
+  span {
+    display: inline-block;
+    font-size: 15px;
+  }
+  span:first-of-type {
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    margin-right: 10px;
+  }
+  span:last-of-type {
+    margin-left: auto;
+    text-align: right;
+    float: right;
+    color: $primary;
+  }
+}
+
+// .item-message__date {
+//   color: $primary;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   &::before {
+//     align-self: flex-start;
+//   }
+// }
 
 .notification__dropdown {
 }
@@ -309,16 +329,35 @@
 .basket__dropdown {
 }
 
+
+
+ 
 .dropdown-top {
   position: absolute;
   top: 100%;
   right: 0;
   z-index: 100;
-  &-content {
+
+  &__title {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      color: $primary;
+      font-size: 15px;
+    }
+  }
+  &__content {
     display: none;
     border-top: 1px solid $primary;
+    padding: 0px 25px;
+    background-color: #fff;
+    box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
   }
-  &-arrow {
+  &__arrow {
     border: 8px solid transparent;
     border-bottom: 8px solid $primary;
     position: absolute;

@@ -42,22 +42,19 @@ $(function () {
    });
 
    // dropdown menu header
-$('.notification__link ')
+   $('.notification__link ')
 
    $(document).on("click", function (ev) {
-      
-      if(! $( ".notification, .header__author-box,  .message, .basket")
-      .has($(ev.target)).length){
-         $('.dropdown-top-content').slideUp(0).prev().toggle(false);
+
+      if (! $(ev.target).closest('.notification, .header__author-box,  .message, .basket').length) {
+         $('.dropdown-top__content').slideUp(0).prev().toggle(false);
       }
-      console.log($(".notification, .header__author-box,  .message, .basket").has($(ev.target)).length);
-      
    })
 
-   
-   $('.header__author-box, .header__notification, .header__message, .header__basket').on('click', function (ev) {
-      var dropdown = $(this).find('.dropdown-top-content');
-      $('.dropdown-top-content').not(dropdown).slideUp(0).prev().toggle(false);
+
+   $('.header__author-box, .notification, .message, .basket').on('click', function (ev) {
+      var dropdown = $(this).find('.dropdown-top__content');
+      $('.dropdown-top__content').not(dropdown).slideUp(0).prev().toggle(false);
       dropdown.prev().toggle();
       if (dropdown.is(":hidden"))
          dropdown.stop().slideDown('fast');
