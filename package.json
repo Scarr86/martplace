@@ -21,9 +21,12 @@
     "rateyo": "^2.3.5"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^2.0.0",
     "normalize.css": "^8.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "wow.js": "^1.2.2"
   }
 }

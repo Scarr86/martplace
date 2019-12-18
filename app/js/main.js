@@ -2,6 +2,8 @@
 
 $(function () {
 
+   new WOW().init();
+
    $('.slider-products').slick({
       infinite: true,
       slidesToShow: 1,
@@ -42,27 +44,51 @@ $(function () {
    });
 
    // dropdown menu header
-   $('.notification__link ')
+   // $('.notification__link ')
 
    $(document).on("click", function (ev) {
 
-      if (! $(ev.target).closest('.notification, .header__author-box,  .message, .basket').length) {
-         $('.dropdown-top__content').slideUp(0).prev().toggle(false);
+      if (!$(ev.target).closest(".dropdown-btn, dropdown-top__content").length) {
+         $(".dropdown-top").removeClass('active');
+         $(".dropdown-top__content").stop().slideUp(0);
       }
    })
 
 
-   $('.header__author-box, .notification, .message, .basket').on('click', function (ev) {
-      var dropdown = $(this).find('.dropdown-top__content');
-      $('.dropdown-top__content').not(dropdown).slideUp(0).prev().toggle(false);
-      dropdown.prev().toggle();
-      if (dropdown.is(":hidden"))
-         dropdown.stop().slideDown('fast');
-      else
-         dropdown.stop().slideUp(0);
-   });
-   //=============
+   function toggleDropDown(el) {
+      let dropdown = el.find(".dropdown-top");
+      let content = el.find(".dropdown-top__content");
+      $(".dropdown-top").not(dropdown).removeClass('active');
+      $(".dropdown-top__content").not(content).stop().slideUp(0);
 
+      if (dropdown.is(".close")) {
+         content.stop(false, true);
+      } else {
+         content.stop(false);
+      }
+
+      if (dropdown.is(".active")) {
+         dropdown.addClass("close");
+         content.slideUp('fast', () => {
+            dropdown.removeClass("active");
+            dropdown.removeClass("close");
+         });
+      } else {
+         dropdown.addClass("active");
+         content.slideDown()
+      }
+
+   }
+   $(".dropdown-btn")
+      .on("click", (ev) => {
+         if($(ev.target).closest($(".dropdown-top__content")).length) return;
+         toggleDropDown($(ev.target).closest($('.dropdown-btn')));
+      });
+      $("a[type='button']").on("click",(ev)=>{
+         ev.preventDefault();
+      })
+      
+   //=============
 
 
    try {
