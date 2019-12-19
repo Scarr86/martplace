@@ -64,6 +64,8 @@ body {
 
 .breadcrumbs {
    margin-top: auto;
+   overflow: hidden;
+   white-space: nowrap;
   li {
     display: inline-block;
     color: #fff;

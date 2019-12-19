@@ -49,7 +49,7 @@ $(function () {
    $(document).on("click", function (ev) {
 
       if (!$(ev.target).closest(".dropdown-btn, dropdown-top__content").length) {
-         $(".dropdown-top").removeClass('active');
+         $(".dropdown-top").removeClass('active close');
          $(".dropdown-top__content").stop().slideUp(0);
       }
    })
@@ -61,17 +61,16 @@ $(function () {
       $(".dropdown-top").not(dropdown).removeClass('active');
       $(".dropdown-top__content").not(content).stop().slideUp(0);
 
-      if (dropdown.is(".close")) {
+      if (dropdown.hasClass("close")) {
          content.stop(false, true);
       } else {
          content.stop(false);
       }
 
-      if (dropdown.is(".active")) {
+      if (dropdown.hasClass("active")) {
          dropdown.addClass("close");
          content.slideUp('fast', () => {
-            dropdown.removeClass("active");
-            dropdown.removeClass("close");
+            dropdown.removeClass("active close");
          });
       } else {
          dropdown.addClass("active");
@@ -81,13 +80,13 @@ $(function () {
    }
    $(".dropdown-btn")
       .on("click", (ev) => {
-         if($(ev.target).closest($(".dropdown-top__content")).length) return;
+         if ($(ev.target).closest($(".dropdown-top__content")).length) return;
          toggleDropDown($(ev.target).closest($('.dropdown-btn')));
       });
-      $("a[type='button']").on("click",(ev)=>{
-         ev.preventDefault();
-      })
-      
+   $("a[type='button']").on("click", (ev) => {
+      ev.preventDefault();
+   })
+
    //=============
 
 
