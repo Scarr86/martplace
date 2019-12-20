@@ -11,8 +11,6 @@ html {
 html,
 body {
   height: 100%;
-  position: relative;
-  overflow-x: hidden;
 }
 a {
   display: inline-block;
@@ -36,6 +34,9 @@ body {
   font-weight: 500;
   color: $text;
   line-height: 30px;
+  position: relative;
+  overflow-x: hidden;
+
 }
 
 .wrapper {
