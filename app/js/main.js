@@ -68,6 +68,28 @@ $(function () {
    })
 
 
+   //==== category ==========
+
+   $(".category-card-h").hide();
+
+
+   
+   $(".filter__control-grid, .filter__control-list").on("click", function (ev){
+      $(".filter__control").children().removeClass('active');
+      $(this).addClass("active");
+      
+      if($(this).hasClass("filter__control-list")){
+         $(".category-card-v").hide();
+         $(".category-card-h").fadeIn();
+      }
+      else{
+         $(".category-card-h").hide();
+         $(".category-card-v").fadeIn();
+      }
+   });
+
+   //==============
+
 
 
    try {
