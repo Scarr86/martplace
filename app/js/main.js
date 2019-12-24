@@ -32,25 +32,16 @@ $(function () {
    });
 
 
-   $(".category-card .rate-star").rateYo({
-      rating: 4.5,
+   $(".rate-star").rateYo({
+      rating: 4.4,
       starWidth: "15px",
+      normalFill: "#fff",
+      ratedFill:"#ffc000",
+      spacing: '3px',
       readOnly: true,
-      ratedFill: "#ffc000"
    })
 
-   $(".products .rate-star").rateYo({
-      rating: 3.6,
-      starWidth: "15px",
-      readOnly: true,
-      ratedFill: "#ffc000"
-   });
-   $(".newest .rate-star").rateYo({
-      rating: 3.6,
-      starWidth: "12px",
-      readOnly: true,
-      ratedFill: "#ffc000"
-   });
+
 
    $(".burger").on('click', function () {
       $('.header .menu__list').slideToggle();
