@@ -31,6 +31,14 @@ $(function () {
       nextArrow: $('.followers .title__btn-right'),
    });
 
+
+   $(".category-card .rate-star").rateYo({
+      rating: 4.5,
+      starWidth: "15px",
+      readOnly: true,
+      ratedFill: "#ffc000"
+   })
+
    $(".products .rate-star").rateYo({
       rating: 3.6,
       starWidth: "15px",
@@ -71,8 +79,6 @@ $(function () {
    //==== category ==========
 
    $(".category-card-h").hide();
-
-
    
    $(".filter__control-grid, .filter__control-list").on("click", function (ev){
       $(".filter__control").children().removeClass('active');
@@ -87,6 +93,7 @@ $(function () {
          $(".category-card-v").fadeIn();
       }
    });
+
 
    //==============
 

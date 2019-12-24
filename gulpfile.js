@@ -55,14 +55,16 @@ gulp.task('html', function () {
 });
 
 gulp.task('js', function () {
-   return gulp.src(
-      'app/js/!(*.min).js',
-      'app/js/*.js',
-   )
+   return gulp.src('app/js/*.js')
+      .pipe(browserSync.reload({ stream: true }))
+});
+
+
+gulp.task('main-min', function () {
+   return gulp.src('app/js/main.js')
       .pipe(uglify())
       .pipe(rename({ suffix: '.min' }))
       .pipe(gulp.dest('app/js'))
-      .pipe(browserSync.reload({ stream: true }))
 });
 
 
@@ -77,7 +79,8 @@ gulp.task('browser-sync', function () {
 gulp.task('watch', function () {
    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
    gulp.watch('app/*.html', gulp.parallel('html'));
-   gulp.watch('app/js/main.js', gulp.parallel('js'));
+   gulp.watch('app/js/*.js', gulp.parallel('js'));
+   gulp.watch('app/js/main.js', gulp.parallel('main-min'));
 });
 
-gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'));
+gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync', 'main-min'));
